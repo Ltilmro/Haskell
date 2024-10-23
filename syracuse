@@ -1,0 +1,7 @@
+syraHelper :: Integral a=>a->a->a
+syraHelper 1 n = n+1
+syraHelper x n
+  |(x `mod` 2 == 0) =syraHelper (x `div` 2) n+1
+  |otherwise =syraHelper (3*x+1) n+1
+syracuse :: Integral a=>a->a
+syracuse n = syraHelper n 0
