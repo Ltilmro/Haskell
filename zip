@@ -1,0 +1,4 @@
+xZipWith :: Num a=>[a]->[a]->[a]
+xZipWith _ [] = []
+xZipWith [] _ = []
+xZipWith (x:a) (y:b) = (x+y): xZipWith a b 
