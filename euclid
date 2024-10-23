@@ -1,0 +1,6 @@
+euclidAlgo :: Integral a => a -> a -> a
+euclidAlgo x 0 = x
+euclidAlgo x y  
+  | x < y     = euclidAlgo x (y - x)
+  | x > y     = euclidAlgo (x - y) y  
+  | otherwise = x
